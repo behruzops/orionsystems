@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <!-- header -->
+  <circle cx="28" cy="30" r="7" fill="#ef4444"/>
+  <text x="44" y="35" font-size="15" font-weight="700" fill="#e6eef8">Zabbix</text>
+  <text x="120" y="35" font-size="12" fill="#6b7d99">Monitoring Dashboard</text>
+  <text x="612" y="35" font-size="11" fill="#34d399" text-anchor="end">● live</text>
+  <line x1="16" y1="48" x2="624" y2="48" stroke="#1d2c49"/>
+
+  <!-- host status tiles grid -->
+  <text x="20" y="72" font-size="11" fill="#6b7d99">HOST STATUS</text>
+
+  <g>
+    <!-- row 1 -->
+    <rect x="20" y="82" width="118" height="44" rx="7" fill="#0e1a2e" stroke="#34d399"/>
+    <circle cx="34" cy="98" r="5" fill="#34d399"/>
+    <text x="46" y="101" font-size="10" fill="#e6eef8">web-01</text>
+    <text x="34" y="118" font-size="9" fill="#6b7d99">up · 0 issues</text>
+
+    <rect x="146" y="82" width="118" height="44" rx="7" fill="#0e1a2e" stroke="#34d399"/>
+    <circle cx="160" cy="98" r="5" fill="#34d399"/>
+    <text x="172" y="101" font-size="10" fill="#e6eef8">web-02</text>
+    <text x="160" y="118" font-size="9" fill="#6b7d99">up · 0 issues</text>
+
+    <rect x="272" y="82" width="118" height="44" rx="7" fill="#0e1a2e" stroke="#fbbf24"/>
+    <circle cx="286" cy="98" r="5" fill="#fbbf24"/>
+    <text x="298" y="101" font-size="10" fill="#e6eef8">db-01</text>
+    <text x="286" y="118" font-size="9" fill="#6b7d99">warn · 2 issues</text>
+
+    <!-- row 2 -->
+    <rect x="20" y="134" width="118" height="44" rx="7" fill="#0e1a2e" stroke="#34d399"/>
+    <circle cx="34" cy="150" r="5" fill="#34d399"/>
+    <text x="46" y="153" font-size="10" fill="#e6eef8">cache-01</text>
+    <text x="34" y="170" font-size="9" fill="#6b7d99">up · 0 issues</text>
+
+    <rect x="146" y="134" width="118" height="44" rx="7" fill="#0e1a2e" stroke="#ef4444"/>
+    <circle cx="160" cy="150" r="5" fill="#ef4444"/>
+    <text x="172" y="153" font-size="10" fill="#e6eef8">app-03</text>
+    <text x="160" y="170" font-size="9" fill="#6b7d99">down · crit</text>
+
+    <rect x="272" y="134" width="118" height="44" rx="7" fill="#0e1a2e" stroke="#34d399"/>
+    <circle cx="286" cy="150" r="5" fill="#34d399"/>
+    <text x="298" y="153" font-size="10" fill="#e6eef8">lb-01</text>
+    <text x="286" y="170" font-size="9" fill="#6b7d99">up · 0 issues</text>
+  </g>
+
+  <!-- triggers list -->
+  <text x="408" y="72" font-size="11" fill="#6b7d99">ACTIVE TRIGGERS</text>
+  <rect x="408" y="82" width="216" height="96" rx="7" fill="#0e1a2e" stroke="#1d2c49"/>
+
+  <rect x="418" y="92" width="3" height="14" rx="1.5" fill="#ef4444"/>
+  <text x="428" y="103" font-size="9.5" fill="#e6eef8">app-03 unreachable</text>
+  <text x="614" y="103" font-size="8" fill="#6b7d99" text-anchor="end">2m</text>
+
+  <rect x="418" y="114" width="3" height="14" rx="1.5" fill="#fbbf24"/>
+  <text x="428" y="125" font-size="9.5" fill="#e6eef8">db-01 high CPU 92%</text>
+  <text x="614" y="125" font-size="8" fill="#6b7d99" text-anchor="end">11m</text>
+
+  <rect x="418" y="136" width="3" height="14" rx="1.5" fill="#fbbf24"/>
+  <text x="428" y="147" font-size="9.5" fill="#e6eef8">db-01 disk 85% full</text>
+  <text x="614" y="147" font-size="8" fill="#6b7d99" text-anchor="end">23m</text>
+
+  <rect x="418" y="158" width="3" height="14" rx="1.5" fill="#38bdf8"/>
+  <text x="428" y="169" font-size="9.5" fill="#e6eef8">web-02 SSL renew</text>
+  <text x="614" y="169" font-size="8" fill="#6b7d99" text-anchor="end">1h</text>
+
+  <!-- time-series graph -->
+  <text x="20" y="208" font-size="11" fill="#6b7d99">CPU LOAD · 24h</text>
+  <rect x="20" y="218" width="604" height="160" rx="7" fill="#0a1424" stroke="#1d2c49"/>
+
+  <!-- grid lines -->
+  <line x1="36" y1="250" x2="608" y2="250" stroke="#16243d"/>
+  <line x1="36" y1="290" x2="608" y2="290" stroke="#16243d"/>
+  <line x1="36" y1="330" x2="608" y2="330" stroke="#16243d"/>
+  <text x="30" y="253" font-size="8" fill="#6b7d99" text-anchor="end">90</text>
+  <text x="30" y="293" font-size="8" fill="#6b7d99" text-anchor="end">60</text>
+  <text x="30" y="333" font-size="8" fill="#6b7d99" text-anchor="end">30</text>
+
+  <!-- area fill -->
+  <path d="M36 320 L100 300 L164 312 L228 278 L292 290 L356 252 L420 268 L484 240 L548 262 L608 248 L608 360 L36 360 Z" fill="url(#area)"/>
+  <!-- cyan line -->
+  <polyline points="36,320 100,300 164,312 228,278 292,290 356,252 420,268 484,240 548,262 608,248" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- violet secondary line -->
+  <polyline points="36,346 100,338 164,342 228,330 292,336 356,322 420,328 484,318 548,326 608,316" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+
+  <circle cx="484" cy="240" r="3" fill="#7dd3fc"/>
+
+  <!-- x axis labels -->
+  <text x="36" y="372" font-size="8" fill="#6b7d99">00:00</text>
+  <text x="322" y="372" font-size="8" fill="#6b7d99" text-anchor="middle">12:00</text>
+  <text x="608" y="372" font-size="8" fill="#6b7d99" text-anchor="end">now</text>
+
+  <!-- legend -->
+  <rect x="500" y="206" width="10" height="4" rx="2" fill="#38bdf8"/>
+  <text x="514" y="213" font-size="8" fill="#6b7d99">db-01</text>
+  <rect x="552" y="206" width="10" height="4" rx="2" fill="#8b5cf6"/>
+  <text x="566" y="213" font-size="8" fill="#6b7d99">web-01</text>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <!-- Title -->
+  <text x="22" y="34" fill="#e6eef8" font-size="15" font-weight="600">ASH Wait-Class Analysis</text>
+  <text x="22" y="51" fill="#6b7d99" font-size="10.5">Active Session History &#183; last 30 min</text>
+
+  <!-- Legend -->
+  <g font-size="9.5" fill="#6b7d99">
+    <rect x="350" y="26" width="9" height="9" rx="2" fill="#38bdf8"/><text x="363" y="34">CPU</text>
+    <rect x="397" y="26" width="9" height="9" rx="2" fill="#8b5cf6"/><text x="410" y="34">User I/O</text>
+    <rect x="458" y="26" width="9" height="9" rx="2" fill="#fbbf24"/><text x="471" y="34">Commit</text>
+    <rect x="519" y="26" width="9" height="9" rx="2" fill="#ef4444"/><text x="532" y="34">Concurr.</text>
+  </g>
+
+  <!-- ===== Stacked area chart panel ===== -->
+  <rect x="22" y="66" width="368" height="220" rx="8" fill="#0a1120" stroke="#16223c"/>
+  <text x="34" y="84" fill="#7dd3fc" font-size="10">Avg Active Sessions</text>
+
+  <!-- y axis grid -->
+  <g stroke="#16223c" stroke-width="1">
+    <line x1="58" y1="100" x2="376" y2="100"/>
+    <line x1="58" y1="140" x2="376" y2="140"/>
+    <line x1="58" y1="180" x2="376" y2="180"/>
+    <line x1="58" y1="220" x2="376" y2="220"/>
+    <line x1="58" y1="260" x2="376" y2="260"/>
+  </g>
+  <g font-size="8" fill="#6b7d99" text-anchor="end">
+    <text x="53" y="103">8</text>
+    <text x="53" y="143">6</text>
+    <text x="53" y="183">4</text>
+    <text x="53" y="223">2</text>
+    <text x="53" y="263">0</text>
+  </g>
+
+  <!-- baseline -->
+  <line x1="58" y1="260" x2="376" y2="260" stroke="#2a3a5c" stroke-width="1"/>
+
+  <!-- stacked areas: x from 58..376, baseline y=260 -->
+  <!-- CPU (bottom) -->
+  <path d="M58,260 L58,232 L94,228 L130,224 L166,218 L202,222 L238,214 L274,218 L310,212 L346,216 L376,214 L376,260 Z" fill="#38bdf8" fill-opacity="0.85"/>
+  <!-- User I/O -->
+  <path d="M58,232 L94,228 L130,224 L166,218 L202,222 L238,214 L274,218 L310,212 L346,216 L376,214 L376,180 L346,176 L310,160 L274,184 L238,172 L202,182 L166,170 L130,196 L94,200 L58,204 Z" fill="#8b5cf6" fill-opacity="0.8"/>
+  <!-- Commit -->
+  <path d="M58,204 L94,200 L130,196 L166,170 L202,182 L238,172 L274,184 L310,160 L346,176 L376,180 L376,160 L346,154 L310,142 L274,166 L238,152 L202,162 L166,148 L130,178 L94,182 L58,186 Z" fill="#fbbf24" fill-opacity="0.75"/>
+  <!-- Concurrency (top) -->
+  <path d="M58,186 L94,182 L130,178 L166,148 L202,162 L238,152 L274,166 L310,142 L346,154 L376,160 L376,146 L346,140 L310,126 L274,152 L238,138 L202,150 L166,132 L130,166 L94,170 L58,174 Z" fill="#ef4444" fill-opacity="0.7"/>
+
+  <!-- selection marker -->
+  <line x1="310" y1="100" x2="310" y2="260" stroke="#7dd3fc" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <circle cx="310" cy="126" r="3" fill="#e6eef8"/>
+
+  <!-- x axis labels -->
+  <g font-size="8" fill="#6b7d99" text-anchor="middle">
+    <text x="58" y="274">-30m</text>
+    <text x="166" y="274">-20m</text>
+    <text x="274" y="274">-10m</text>
+    <text x="376" y="274">now</text>
+  </g>
+
+  <!-- ===== Drill-down: Top SQL panel ===== -->
+  <rect x="402" y="66" width="216" height="220" rx="8" fill="#0a1120" stroke="#16223c"/>
+  <text x="414" y="84" fill="#7dd3fc" font-size="10">Top SQL &#8212; 14:32 slice</text>
+  <line x1="414" y1="92" x2="606" y2="92" stroke="#16223c"/>
+
+  <!-- column header -->
+  <g font-size="8" fill="#6b7d99">
+    <text x="414" y="106">SQL_ID</text>
+    <text x="566" y="106" text-anchor="end">% Act</text>
+  </g>
+
+  <!-- rows -->
+  <g font-size="9">
+    <text x="414" y="124" fill="#e6eef8" font-family="Consolas,monospace">7d8gq2k1...</text>
+    <rect x="414" y="128" width="152" height="5" rx="2.5" fill="#16223c"/>
+    <rect x="414" y="128" width="120" height="5" rx="2.5" fill="#ef4444"/>
+    <text x="606" y="124" fill="#ef4444" text-anchor="end" font-size="8.5">41%</text>
+
+    <text x="414" y="152" fill="#e6eef8" font-family="Consolas,monospace">a93jf0m4...</text>
+    <rect x="414" y="156" width="152" height="5" rx="2.5" fill="#16223c"/>
+    <rect x="414" y="156" width="88" height="5" rx="2.5" fill="#fbbf24"/>
+    <text x="606" y="152" fill="#fbbf24" text-anchor="end" font-size="8.5">28%</text>
+
+    <text x="414" y="180" fill="#e6eef8" font-family="Consolas,monospace">c01zx7p9...</text>
+    <rect x="414" y="184" width="152" height="5" rx="2.5" fill="#16223c"/>
+    <rect x="414" y="184" width="56" height="5" rx="2.5" fill="#8b5cf6"/>
+    <text x="606" y="180" fill="#8b5cf6" text-anchor="end" font-size="8.5">17%</text>
+
+    <text x="414" y="208" fill="#e6eef8" font-family="Consolas,monospace">f42hb6n3...</text>
+    <rect x="414" y="212" width="152" height="5" rx="2.5" fill="#16223c"/>
+    <rect x="414" y="212" width="32" height="5" rx="2.5" fill="#38bdf8"/>
+    <text x="606" y="208" fill="#38bdf8" text-anchor="end" font-size="8.5">9%</text>
+
+    <text x="414" y="236" fill="#6b7d99" font-family="Consolas,monospace">e17ks5d2...</text>
+    <rect x="414" y="240" width="152" height="5" rx="2.5" fill="#16223c"/>
+    <rect x="414" y="240" width="18" height="5" rx="2.5" fill="#34d399"/>
+    <text x="606" y="236" fill="#34d399" text-anchor="end" font-size="8.5">5%</text>
+  </g>
+
+  <line x1="414" y1="256" x2="606" y2="256" stroke="#16223c"/>
+  <text x="414" y="272" fill="#6b7d99" font-size="8.5">Top event:</text>
+  <text x="466" y="272" fill="#ef4444" font-size="8.5">buffer busy waits</text>
+
+  <!-- ===== Bottom KPI strip ===== -->
+  <g>
+    <rect x="22" y="298" width="142" height="82" rx="8" fill="#0a1120" stroke="#16223c"/>
+    <text x="34" y="318" fill="#6b7d99" font-size="9">DB Time</text>
+    <text x="34" y="346" fill="#38bdf8" font-size="22" font-weight="600">5.8</text>
+    <text x="78" y="346" fill="#6b7d99" font-size="9">AAS</text>
+    <text x="34" y="368" fill="#34d399" font-size="8.5">&#9650; healthy load</text>
+
+    <rect x="174" y="298" width="142" height="82" rx="8" fill="#0a1120" stroke="#16223c"/>
+    <text x="186" y="318" fill="#6b7d99" font-size="9">Wait %</text>
+    <text x="186" y="346" fill="#fbbf24" font-size="22" font-weight="600">37%</text>
+    <text x="186" y="368" fill="#fbbf24" font-size="8.5">non-CPU waits</text>
+
+    <rect x="326" y="298" width="142" height="82" rx="8" fill="#0a1120" stroke="#16223c"/>
+    <text x="338" y="318" fill="#6b7d99" font-size="9">Concurrency</text>
+    <text x="338" y="346" fill="#ef4444" font-size="22" font-weight="600">12%</text>
+    <text x="338" y="368" fill="#ef4444" font-size="8.5">&#9650; rising contention</text>
+
+    <rect x="478" y="298" width="140" height="82" rx="8" fill="#0a1120" stroke="#16223c"/>
+    <text x="490" y="318" fill="#6b7d99" font-size="9">Sessions</text>
+    <text x="490" y="346" fill="#7dd3fc" font-size="22" font-weight="600">214</text>
+    <text x="490" y="368" fill="#6b7d99" font-size="8.5">48 active</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <!-- Title -->
+  <circle cx="28" cy="30" r="7" fill="#fbbf24"/>
+  <path d="M24 30 l4 4 l5 -7" fill="none" stroke="#0b1322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="44" y="34" fill="#e6eef8" font-size="15" font-weight="600">Prometheus</text>
+  <text x="148" y="34" fill="#6b7d99" font-size="11">monitoring</text>
+
+  <!-- Targets panel -->
+  <rect x="20" y="52" width="240" height="186" rx="10" fill="#0e1a30" stroke="#1d2c49"/>
+  <text x="34" y="74" fill="#7dd3fc" font-size="12" font-weight="600">Targets</text>
+  <text x="218" y="74" fill="#6b7d99" font-size="10">4/4 UP</text>
+  <line x1="34" y1="82" x2="246" y2="82" stroke="#1d2c49"/>
+
+  <!-- target rows -->
+  <g font-size="11">
+    <circle cx="40" cy="102" r="4" fill="#34d399"/>
+    <text x="52" y="106" fill="#e6eef8">node-exporter:9100</text>
+    <text x="216" y="106" fill="#34d399" font-size="9">UP</text>
+
+    <circle cx="40" cy="128" r="4" fill="#34d399"/>
+    <text x="52" y="132" fill="#e6eef8">api-server:8080</text>
+    <text x="216" y="132" fill="#34d399" font-size="9">UP</text>
+
+    <circle cx="40" cy="154" r="4" fill="#34d399"/>
+    <text x="52" y="158" fill="#e6eef8">oracle-exp:9161</text>
+    <text x="216" y="158" fill="#34d399" font-size="9">UP</text>
+
+    <circle cx="40" cy="180" r="4" fill="#34d399"/>
+    <text x="52" y="184" fill="#e6eef8">cadvisor:8082</text>
+    <text x="216" y="184" fill="#34d399" font-size="9">UP</text>
+
+    <circle cx="40" cy="206" r="4" fill="#34d399"/>
+    <text x="52" y="210" fill="#e6eef8">blackbox:9115</text>
+    <text x="216" y="210" fill="#34d399" font-size="9">UP</text>
+  </g>
+
+  <!-- PromQL graph panel -->
+  <rect x="276" y="52" width="344" height="186" rx="10" fill="#0e1a30" stroke="#1d2c49"/>
+  <rect x="290" y="64" width="316" height="20" rx="5" fill="#0b1322" stroke="#1d2c49"/>
+  <text x="298" y="78" fill="#8b5cf6" font-size="10" font-family="Consolas,monospace">rate(http_requests_total[5m])</text>
+
+  <!-- grid -->
+  <g stroke="#16243e" stroke-width="1">
+    <line x1="296" y1="118" x2="606" y2="118"/>
+    <line x1="296" y1="152" x2="606" y2="152"/>
+    <line x1="296" y1="186" x2="606" y2="186"/>
+    <line x1="296" y1="220" x2="606" y2="220"/>
+  </g>
+  <line x1="296" y1="100" x2="296" y2="220" stroke="#1d2c49"/>
+  <line x1="296" y1="220" x2="606" y2="220" stroke="#1d2c49"/>
+
+  <!-- area + line -->
+  <path d="M296 200 L330 184 L364 192 L398 160 L432 170 L466 132 L500 148 L534 116 L568 128 L606 108 L606 220 L296 220 Z" fill="#38bdf8" opacity="0.12"/>
+  <path d="M296 200 L330 184 L364 192 L398 160 L432 170 L466 132 L500 148 L534 116 L568 128 L606 108" fill="none" stroke="url(#line)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="606" cy="108" r="3.5" fill="#7dd3fc"/>
+
+  <text x="298" y="232" fill="#6b7d99" font-size="9">-30m</text>
+  <text x="580" y="232" fill="#6b7d99" font-size="9">now</text>
+
+  <!-- Gauges -->
+  <rect x="20" y="254" width="295" height="126" rx="10" fill="#0e1a30" stroke="#1d2c49"/>
+  <rect x="325" y="254" width="295" height="126" rx="10" fill="#0e1a30" stroke="#1d2c49"/>
+
+  <!-- CPU gauge -->
+  <text x="167" y="278" fill="#6b7d99" font-size="11" text-anchor="middle">CPU</text>
+  <path d="M117 348 A50 50 0 1 1 217 348" fill="none" stroke="#16243e" stroke-width="10" stroke-linecap="round"/>
+  <path d="M117 348 A50 50 0 0 1 200 311" fill="none" stroke="#34d399" stroke-width="10" stroke-linecap="round"/>
+  <text x="167" y="344" fill="#e6eef8" font-size="22" font-weight="700" text-anchor="middle">62%</text>
+  <text x="167" y="364" fill="#34d399" font-size="9" text-anchor="middle">healthy</text>
+
+  <!-- MEM gauge -->
+  <text x="472" y="278" fill="#6b7d99" font-size="11" text-anchor="middle">MEM</text>
+  <path d="M422 348 A50 50 0 1 1 522 348" fill="none" stroke="#16243e" stroke-width="10" stroke-linecap="round"/>
+  <path d="M422 348 A50 50 0 1 1 514 322" fill="none" stroke="#fbbf24" stroke-width="10" stroke-linecap="round"/>
+  <text x="472" y="344" fill="#e6eef8" font-size="22" font-weight="700" text-anchor="middle">81%</text>
+  <text x="472" y="364" fill="#fbbf24" font-size="9" text-anchor="middle">warning</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <!-- Telegram header -->
+  <circle cx="44" cy="44" r="18" fill="#38bdf8"/>
+  <path d="M35 44l18-6-3 14-4-4-3 3-1-5z" fill="#070d18"/>
+  <text x="72" y="40" font-size="15" fill="#e6eef8" font-weight="700">ORIONDB Bot</text>
+  <text x="72" y="56" font-size="11" fill="#6b7d99">monitoring alerts</text>
+  <circle cx="600" cy="44" r="5" fill="#34d399"/>
+  <text x="592" y="40" font-size="10" fill="#6b7d99" text-anchor="end">online</text>
+
+  <!-- Chat bubble -->
+  <rect x="40" y="84" width="500" height="232" rx="16" fill="#101b30" stroke="#1d2c49"/>
+  <path d="M40 116 l-14 -8 l14 -10 z" fill="#101b30" stroke="#1d2c49"/>
+
+  <!-- CRITICAL header strip -->
+  <rect x="40" y="84" width="500" height="40" rx="16" fill="#1a1020"/>
+  <rect x="40" y="104" width="500" height="20" fill="#1a1020"/>
+  <circle cx="66" cy="104" r="9" fill="#ef4444"/>
+  <path d="M66 99v6 M66 108v1" stroke="#0b1322" stroke-width="2" stroke-linecap="round"/>
+  <text x="84" y="109" font-size="14" fill="#ef4444" font-weight="700">CRITICAL ALERT</text>
+  <text x="524" y="109" font-size="11" fill="#6b7d99" text-anchor="end">#A-2048</text>
+
+  <!-- Alert fields -->
+  <text x="64" y="152" font-size="11" fill="#6b7d99">DB</text>
+  <text x="180" y="152" font-size="12" fill="#e6eef8" font-weight="600">ORCLPROD-01</text>
+
+  <text x="64" y="180" font-size="11" fill="#6b7d99">Schema</text>
+  <text x="180" y="180" font-size="12" fill="#7dd3fc" font-weight="600">FINANCE</text>
+
+  <text x="64" y="208" font-size="11" fill="#6b7d99">Cause</text>
+  <text x="180" y="208" font-size="12" fill="#fbbf24" font-weight="600">Tablespace 97% full</text>
+
+  <text x="64" y="236" font-size="11" fill="#6b7d99">Time</text>
+  <text x="180" y="236" font-size="12" fill="#e6eef8">08 Jun 2026  14:32</text>
+
+  <line x1="64" y1="256" x2="516" y2="256" stroke="#1d2c49"/>
+
+  <!-- Inline buttons -->
+  <rect x="64" y="270" width="138" height="32" rx="8" fill="#13233d" stroke="#34d399"/>
+  <text x="133" y="291" font-size="12" fill="#34d399" font-weight="600" text-anchor="middle">Ack</text>
+
+  <rect x="221" y="270" width="138" height="32" rx="8" fill="#13233d" stroke="#fbbf24"/>
+  <text x="290" y="291" font-size="12" fill="#fbbf24" font-weight="600" text-anchor="middle">Snooze</text>
+
+  <rect x="378" y="270" width="138" height="32" rx="8" fill="#13233d" stroke="#38bdf8"/>
+  <text x="447" y="291" font-size="12" fill="#38bdf8" font-weight="600" text-anchor="middle">Resolve</text>
+
+  <!-- timestamp footer -->
+  <text x="524" y="336" font-size="10" fill="#6b7d99" text-anchor="end">14:32 delivered</text>
+
+  <!-- accent glow line -->
+  <rect x="40" y="84" width="4" height="232" rx="2" fill="#ef4444"/>
+</svg>

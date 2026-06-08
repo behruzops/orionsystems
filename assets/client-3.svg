@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" font-family="'Inter',Arial,sans-serif">
+  <polygon points="28,14 42,38 14,38" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="28" cy="30" r="3" fill="#fbbf24"/>
+  <text x="52" y="37" font-size="20" font-weight="800" fill="#cdd9ec">Tezkor<tspan fill="#fbbf24">IT</tspan></text>
+</svg>

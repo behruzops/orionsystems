@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <!-- header -->
+  <circle cx="34" cy="40" r="9" fill="#34d399"/>
+  <circle cx="34" cy="40" r="4" fill="#0b1322"/>
+  <text x="52" y="38" fill="#e6eef8" font-size="17" font-weight="600">Uptime Kuma</text>
+  <text x="52" y="54" fill="#6b7d99" font-size="11">Status page — all systems operational</text>
+  <rect x="498" y="28" width="118" height="26" rx="13" fill="#0e1c2f" stroke="#34d399"/>
+  <circle cx="514" cy="41" r="4" fill="#34d399"/>
+  <text x="525" y="45" fill="#34d399" font-size="11" font-weight="600">Operational</text>
+
+  <line x1="24" y1="70" x2="616" y2="70" stroke="#1d2c49"/>
+
+  <!-- big uptime % -->
+  <rect x="24" y="86" width="232" height="120" rx="12" fill="#0e1726" stroke="#1d2c49"/>
+  <text x="40" y="112" fill="#6b7d99" font-size="11">Overall uptime (30d)</text>
+  <text x="40" y="166" fill="#34d399" font-size="46" font-weight="700">99.98%</text>
+  <text x="40" y="190" fill="#6b7d99" font-size="11">8m downtime · 5 monitors</text>
+
+  <!-- response-time sparkline -->
+  <rect x="272" y="86" width="344" height="120" rx="12" fill="#0e1726" stroke="#1d2c49"/>
+  <text x="288" y="112" fill="#6b7d99" font-size="11">Avg response time</text>
+  <text x="540" y="112" fill="#38bdf8" font-size="13" font-weight="600">42 ms</text>
+  <polyline fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+    points="290,178 312,160 334,168 356,142 378,150 400,128 422,138 444,118 466,150 488,134 510,158 532,140 554,166 576,148 598,158"/>
+  <polyline fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0" points="0,0 0,0"/>
+  <circle cx="598" cy="158" r="3.5" fill="#7dd3fc"/>
+  <line x1="288" y1="194" x2="600" y2="194" stroke="#1d2c49"/>
+
+  <!-- service rows -->
+  <g font-size="12">
+    <!-- row 1 -->
+    <rect x="24" y="222" width="592" height="34" rx="8" fill="#0e1726" stroke="#1d2c49"/>
+    <circle cx="44" cy="239" r="5" fill="#34d399"/>
+    <text x="58" y="243" fill="#e6eef8">API Gateway</text>
+    <text x="470" y="243" fill="#6b7d99" font-size="11">99.99%</text>
+    <text x="582" y="243" fill="#34d399" font-size="11" font-weight="600" text-anchor="end">Up</text>
+
+    <!-- row 2 -->
+    <rect x="24" y="262" width="592" height="34" rx="8" fill="#0e1726" stroke="#1d2c49"/>
+    <circle cx="44" cy="279" r="5" fill="#34d399"/>
+    <text x="58" y="283" fill="#e6eef8">PostgreSQL Primary</text>
+    <text x="470" y="283" fill="#6b7d99" font-size="11">100.0%</text>
+    <text x="582" y="283" fill="#34d399" font-size="11" font-weight="600" text-anchor="end">Up</text>
+
+    <!-- row 3 (down) -->
+    <rect x="24" y="302" width="592" height="34" rx="8" fill="#1a1320" stroke="#3a2030"/>
+    <circle cx="44" cy="319" r="5" fill="#ef4444"/>
+    <text x="58" y="323" fill="#e6eef8">Mail Relay</text>
+    <text x="470" y="323" fill="#6b7d99" font-size="11">97.40%</text>
+    <text x="582" y="323" fill="#ef4444" font-size="11" font-weight="600" text-anchor="end">Down</text>
+
+    <!-- row 4 (warn) -->
+    <rect x="24" y="342" width="592" height="34" rx="8" fill="#0e1726" stroke="#1d2c49"/>
+    <circle cx="44" cy="359" r="5" fill="#fbbf24"/>
+    <text x="58" y="363" fill="#e6eef8">CDN Edge</text>
+    <text x="470" y="363" fill="#6b7d99" font-size="11">99.62%</text>
+    <text x="582" y="363" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="end">Slow</text>
+  </g>
+
+  <!-- mini uptime bars on row 1 -->
+  <g>
+    <rect x="320" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="326" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="332" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="338" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="344" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="350" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="356" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="362" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="368" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="374" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="380" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="386" y="232" width="3" height="14" rx="1" fill="#34d399"/>
+  </g>
+  <!-- mini bars row 3 down -->
+  <g>
+    <rect x="320" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="326" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="332" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="338" y="312" width="3" height="14" rx="1" fill="#ef4444"/>
+    <rect x="344" y="312" width="3" height="14" rx="1" fill="#ef4444"/>
+    <rect x="350" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="356" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="362" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="368" y="312" width="3" height="14" rx="1" fill="#ef4444"/>
+    <rect x="374" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="380" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+    <rect x="386" y="312" width="3" height="14" rx="1" fill="#34d399"/>
+  </g>
+</svg>

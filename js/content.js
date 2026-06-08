@@ -1,0 +1,215 @@
+/* ============================================================
+   OrionSystems — generated marketing content (trilingual)
+   Loaded after data.js; augments window.DATA with:
+   benefits, whyUs, faq, cases, blog, oriondb.gallery, and
+   assigns a hero image to each service.
+   ============================================================ */
+(function () {
+  const D = window.DATA;
+
+  /* ---- ORIONDB benefits / outcomes (what a client achieves) ---- */
+  D.benefits = [
+    { icon: "_alert", badge: { uz: "↓ downtime", ru: "↓ простои", en: "↓ downtime" },
+      title: { uz: "Mijoz sezmasidan oldin", ru: "Раньше, чем заметит клиент", en: "Caught before clients notice" },
+      desc: { uz: "Muammoni avariya bo'lishidan oldin aniqlaymiz: sekinlashish, bloklanish va resurs tig'izligi mijozlaringizga yetib bormasdan hal qilinadi.",
+              ru: "Выявляем проблему до аварии: замедления, блокировки и нехватку ресурсов вы устраняете прежде, чем их почувствуют ваши клиенты.",
+              en: "We surface problems before they become outages — slowdowns, locks and resource pressure are fixed before they ever reach your customers." } },
+    { icon: "_chart", badge: { uz: "−Oracle EM litsenziya", ru: "−лицензия Oracle EM", en: "−Oracle EM license" },
+      title: { uz: "Oracle EM litsenziyasiz", ru: "Без лицензий Oracle EM", en: "No Oracle EM licensing" },
+      desc: { uz: "Qimmat Oracle EM va Diagnostics/Tuning Pack litsenziyalarini ORIONDB bilan almashtiring — bir martalik mahsulot, takrorlanuvchi yillik to'lovsiz.",
+              ru: "Замените дорогие лицензии Oracle EM и Diagnostics/Tuning Pack на ORIONDB — один продукт без ежегодных отчислений.",
+              en: "Replace costly Oracle EM and Diagnostics/Tuning Pack licensing with ORIONDB — one product, no recurring annual fees." } },
+    { icon: "_stack", badge: { uz: "1 DBA = 50+ baza", ru: "1 DBA = 50+ баз", en: "1 DBA = 50+ DBs" },
+      title: { uz: "1 DBA = 50+ baza", ru: "1 DBA = 50+ баз", en: "1 DBA, 50+ databases" },
+      desc: { uz: "Bitta DBA o'nlab Oracle va multi-DB instanslarni bir oynadan boshqaradi — jamoani o'stirmasdan ko'proq bazani nazoratda tuting.",
+              ru: "Один DBA управляет десятками экземпляров Oracle и multi-DB из единого окна — больше баз без расширения команды.",
+              en: "One DBA runs dozens of Oracle and multi-DB instances from a single pane — cover more databases without growing the team." } },
+    { icon: "_monitor", badge: { uz: "soat → daqiqa", ru: "часы → минуты", en: "hours → minutes" },
+      title: { uz: "Tez diagnostika: ASH va Top SQL", ru: "Быстрая диагностика: ASH и Top SQL", en: "Faster root cause: ASH & Top SQL" },
+      desc: { uz: "ASH, kutish hodisalari va Top SQL real vaqtda ko'rsatadi — sababini soatlab izlash o'rniga daqiqalarda topasiz.",
+              ru: "ASH, события ожидания и Top SQL в реальном времени — находите причину за минуты, а не за часы.",
+              en: "Real-time ASH, wait events and Top SQL pinpoint the culprit in minutes instead of hours of guesswork." } },
+    { icon: "telegram", badge: { uz: "24/7 xotirjamlik", ru: "спокойствие 24/7", en: "24/7 peace of mind" },
+      title: { uz: "24/7 xotirjamlik", ru: "Спокойствие 24/7", en: "24/7 peace of mind" },
+      desc: { uz: "Kritik hodisalar bo'yicha ogohlantirishlar to'g'ridan-to'g'ri Telegram'ga keladi — ekranni kuzatib o'tirmasangiz ham har doim xabardor bo'lasiz.",
+              ru: "Оповещения о критичных событиях приходят прямо в Telegram — вы всегда в курсе, даже не глядя на экран.",
+              en: "Critical alerts land straight in Telegram — you stay informed around the clock without watching a screen." } },
+    { icon: "_lock", badge: { uz: "100% on-prem", ru: "100% on-prem", en: "100% on-prem" },
+      title: { uz: "On-prem ma'lumot xavfsizligi", ru: "Данные остаются у вас (on-prem)", en: "On-prem data security" },
+      desc: { uz: "ORIONDB to'liq sizning serverlaringizda ishlaydi — baza ma'lumotlari va parollar tashqi bulutga chiqmaydi. Bank va davlat talablariga mos.",
+              ru: "ORIONDB работает полностью на ваших серверах — данные и пароли не уходят во внешнее облако. Подходит для банков и госорганов.",
+              en: "ORIONDB runs entirely on your own servers — database data and credentials never leave for an external cloud. Bank- and government-ready." } },
+    { icon: "_shield", badge: { uz: "RBAC + audit", ru: "RBAC + аудит", en: "RBAC + audit" },
+      title: { uz: "Audit va RBAC moslik", ru: "Аудит и RBAC-комплаенс", en: "Audit & RBAC compliance" },
+      desc: { uz: "Rolga asoslangan kirish (DBA, Auditor va boshqalar) va to'liq audit izi — kim nima qilganini ko'rsatadi va tartibga soluvchi tekshiruvlardan oson o'tasiz.",
+              ru: "Ролевой доступ (DBA, Auditor и др.) и полный аудит-лог показывают, кто и что сделал — регуляторные проверки проходятся легко.",
+              en: "Role-based access (DBA, Auditor and more) and a full audit trail show who did what — sail through regulatory reviews." } },
+    { icon: "_globe", badge: { uz: "o'z brendingiz", ru: "ваш бренд", en: "your brand" },
+      title: { uz: "White-label qayta sotuv", ru: "White-label перепродажа", en: "White-label resale" },
+      desc: { uz: "ORIONDB'ni o'z brendingiz, logotipingiz va ranglaringiz ostida mijozlaringizga taklif eting — yangi daromad oqimi sifatida qayta soting.",
+              ru: "Предлагайте ORIONDB клиентам под своим брендом, логотипом и цветами — перепродавайте как новый источник дохода.",
+              en: "Offer ORIONDB to your clients under your own brand, logo and colours — resell it as a new revenue stream." } },
+  ];
+
+  /* ---- Why choose OrionSystems ---- */
+  D.whyUs = [
+    { icon: "_db", title: { uz: "Amaliy Oracle/DBA va monitoring tajribasi", ru: "Практический опыт Oracle/DBA и мониторинга", en: "Hands-on Oracle/DBA & monitoring expertise" },
+      desc: { uz: "Jamoamiz Oracle ma'lumotlar bazalarini har kuni boshqaradi, sozlaydi va monitoring qiladi. Real loyihalardagi tajriba bazalaringiz barqaror va tez ishlashini ta'minlaydi.",
+              ru: "Наша команда ежедневно администрирует, настраивает и мониторит базы данных Oracle. Опыт из реальных проектов гарантирует стабильную и быструю работу ваших баз.",
+              en: "Our team administers, tunes and monitors Oracle databases every day. Experience from real-world projects keeps your databases stable and fast." } },
+    { icon: "_lock", title: { uz: "On-prem: ma'lumotlaringiz sizniki bo'lib qoladi", ru: "On-prem: ваши данные остаются у вас", en: "On-prem: your data stays with you" },
+      desc: { uz: "Yechimlarimiz to'liq sizning serverlaringizda ishlaydi — hech qanday ma'lumot tashqariga chiqmaydi. Bu banklar va davlat tashkilotlari uchun maxfiylik va muvofiqlik talablariga to'liq mos keladi.",
+              ru: "Наши решения работают полностью на ваших серверах — данные никуда не уходят. Это полностью отвечает требованиям конфиденциальности и комплаенса банков и госорганизаций.",
+              en: "Our solutions run entirely on your own servers — no data ever leaves your perimeter. This fully meets the privacy and compliance needs of banks and government organizations." } },
+    { icon: "_alert", title: { uz: "Tezkor javob va doimiy qo'llab-quvvatlash (SLA)", ru: "Быстрый отклик и постоянная поддержка (SLA)", en: "Fast response & ongoing support (SLA)" },
+      desc: { uz: "Aniq SLA shartlari asosida ishlaymiz va muammolarga tez munosabat bildiramiz. Tizimingiz ishga tushgandan keyin ham yoningizda bo'lib, uzluksiz qo'llab-quvvatlaymiz.",
+              ru: "Мы работаем по чётким условиям SLA и оперативно реагируем на инциденты. Мы остаёмся рядом и после запуска, обеспечивая непрерывную поддержку.",
+              en: "We work to clear SLA terms and react quickly to incidents. We stay with you long after go-live, providing continuous support." } },
+    { icon: "telegram", title: { uz: "Mahalliy qo'llab-quvvatlash: o'zbek va rus tilida", ru: "Локальная поддержка: на узбекском и русском", en: "Local support in Uzbek & Russian" },
+      desc: { uz: "Jamoamiz O'zbekistonda joylashgan va siz bilan o'zbek hamda rus tilida muloqot qiladi. Vaqt mintaqasi va til to'siqlarisiz — tushunarli va yaqin xizmat.",
+              ru: "Наша команда находится в Узбекистане и общается с вами на узбекском и русском языках. Без языковых барьеров и разницы во времени — понятный и близкий сервис.",
+              en: "Our team is based in Uzbekistan and communicates with you in Uzbek and Russian. No time-zone gaps or language barriers — service that's close and clear." } },
+    { icon: "_monitor", title: { uz: "O'z mahsulotimiz — ORIONDB", ru: "Собственный продукт — ORIONDB", en: "Our own product — ORIONDB" },
+      desc: { uz: "ORIONDB — bizning real vaqtli monitoring platformamiz, Oracle EM o'rnini bosadi. Mahsulot o'zimizniki bo'lgani uchun uni chuqur bilamiz va ehtiyojlaringizga moslab sozlaymiz.",
+              ru: "ORIONDB — наша платформа мониторинга в реальном времени, замена Oracle EM. Поскольку продукт создан нами, мы знаем его до глубины и адаптируем под ваши задачи.",
+              en: "ORIONDB is our real-time monitoring platform — a replacement for Oracle EM. Because we built it ourselves, we know it inside out and tailor it to your needs." } },
+    { icon: "_devops", title: { uz: "Boshidan oxirigacha: loyihalash → joriy etish → qo'llab-quvvatlash", ru: "Под ключ: проектирование → внедрение → поддержка", en: "End-to-end: design → deploy → support" },
+      desc: { uz: "Arxitekturani loyihalashdan tortib joriy etish va keyingi qo'llab-quvvatlashgacha bo'lgan barcha bosqichlarni o'z zimmamizga olamiz. Bitta ishonchli sherik bilan butun yo'lni bemalol bosib o'tasiz.",
+              ru: "Мы берём на себя все этапы — от проектирования архитектуры до внедрения и дальнейшего сопровождения. С одним надёжным партнёром вы проходите весь путь спокойно.",
+              en: "We handle every stage — from architecture design to deployment and ongoing maintenance. With one reliable partner, you go the whole way with confidence." } },
+  ];
+
+  /* ---- FAQ ---- */
+  D.faq = [
+    { q: { uz: "ORIONDB to'liq on-premise ishlaydimi? Ma'lumotlarimiz tarmog'imizdan tashqariga chiqadimi?", ru: "ORIONDB работает полностью on-premise? Покидают ли наши данные нашу сеть?", en: "Does ORIONDB run fully on-premise? Does our data ever leave our network?" },
+      a: { uz: "Ha, ORIONDB to'liq sizning serverlaringizda, yopiq tarmoqda ishlaydi — hech qanday ma'lumot bulutga yoki tashqi serverlarga uzatilmaydi. Internetga ulanish talab qilinmaydi, shu sababli platforma izolyatsiya qilingan bank va davlat muhitlari uchun ham mos keladi.",
+           ru: "Да, ORIONDB полностью разворачивается на ваших серверах внутри закрытого контура — никакие данные не передаются в облако или на внешние серверы. Подключение к интернету не требуется, поэтому платформа подходит даже для изолированных банковских и государственных сред.",
+           en: "Yes. ORIONDB is deployed entirely on your own servers inside your closed network — no data is ever sent to the cloud or to any external server. Internet access is not required, so the platform fits even air-gapped banking and government environments." } },
+    { q: { uz: "Narxlar qanday tuzilgan? Basic, Pro va Max paketlari nimasi bilan farq qiladi?", ru: "Как устроено ценообразование? Чем различаются пакеты Basic, Pro и Max?", en: "How is pricing structured? What's the difference between the Basic, Pro and Max packages?" },
+      a: { uz: "Uchta paket bor: Basic (asosiy monitoring, RBAC, backup va inventar), Pro (multi-DB qo'llab-quvvatlash, saldo hisoboti va Grafana integratsiyasi) hamda Max (infratuzilma, GitLab integratsiyasi va white-label). Litsenziya doimiy (perpetual) — bir marta sotib olasiz, doimiy egasiz; yillik texnik qo'llab-quvvatlash narxning ~20% qismini tashkil etadi va ixtiyoriy.",
+           ru: "Мы предлагаем три пакета: Basic (базовый мониторинг, RBAC, бэкап и инвентаризация), Pro (поддержка multi-DB, отчёт по сальдо и интеграция с Grafana) и Max (инфраструктура, интеграция с GitLab и white-label). Лицензия бессрочная — вы покупаете её один раз и владеете навсегда; годовая техподдержка составляет около 20% от стоимости и подключается по желанию.",
+           en: "We offer three tiers: Basic (core monitoring, RBAC, backup and inventory), Pro (multi-DB support, balance/saldo reporting and Grafana integration) and Max (infrastructure, GitLab integration and white-label). Licensing is perpetual — you buy once and own it permanently; annual support runs at roughly 20% of the license cost and is optional." } },
+    { q: { uz: "Qanday texnik qo'llab-quvvatlash beriladi?", ru: "Какую техническую поддержку вы предоставляете?", en: "What kind of support do you provide?" },
+      a: { uz: "O'rnatish, sozlash va o'qitishni to'liq o'z zimmamizga olamiz, so'ngra yillik support shartnomasi doirasida yangilanishlar, xato tuzatishlar va konsultatsiya bilan ta'minlaymiz. Mahalliy jamoa sifatida o'zbek va rus tillarida tezkor aloqa va kelishilgan SLA shartlarini taklif qilamiz.",
+           ru: "Мы полностью берём на себя установку, настройку и обучение, а затем в рамках годового договора поддержки предоставляем обновления, исправления и консультации. Как локальная команда мы обеспечиваем оперативную связь на узбекском и русском языках и согласованные условия SLA.",
+           en: "We handle installation, configuration and training end to end, then provide updates, fixes and consulting under an annual support agreement. As a local team we offer prompt communication in Uzbek and Russian and agreed SLA terms." } },
+    { q: { uz: "Joriy etish (deployment) qancha vaqt oladi?", ru: "Сколько времени занимает развёртывание?", en: "How long does deployment take?" },
+      a: { uz: "ORIONDB Docker asosida yetkazib beriladi, shuning uchun odatdagi o'rnatish bir necha soatdan bir-ikki ish kunigacha vaqt oladi. Murakkab muhitlarda baza ulanishlari, rollar va monitoring konfiguratsiyasini siz bilan birga sozlab, ishga tushishni jadalga muvofiq rejalashtiramiz.",
+           ru: "ORIONDB поставляется на базе Docker, поэтому типовая установка занимает от нескольких часов до одного-двух рабочих дней. В сложных средах мы вместе с вами настраиваем подключения к базам, роли и конфигурацию мониторинга и планируем запуск по согласованному графику.",
+           en: "ORIONDB ships as Docker containers, so a typical install takes from a few hours up to one or two business days. In more complex environments we configure database connections, roles and monitoring together with you and plan go-live on an agreed schedule." } },
+    { q: { uz: "ORIONDB bizning mavjud infratuzilmamiz va Oracle bazalarimiz bilan ishlaydimi?", ru: "Работает ли ORIONDB с нашей существующей инфраструктурой и базами Oracle?", en: "Does ORIONDB work with our existing infrastructure and Oracle databases?" },
+      a: { uz: "Ha, ORIONDB Oracle EM o'rniga ishlab chiqilgan va Oracle bazalarini real vaqtda kuzatadi, shu bilan birga boshqa DBMS turlarini ham qo'llab-quvvatlaydi (Pro va Max paketlarida multi-DB). Platforma mavjud serverlaringiz, virtualizatsiya muhitingiz va kuzatuv vositalaringiz (masalan, Grafana) bilan ishlaydi.",
+           ru: "Да, ORIONDB создан как замена Oracle EM и ведёт мониторинг баз Oracle в реальном времени, а также поддерживает другие СУБД (multi-DB в пакетах Pro и Max). Платформа интегрируется с вашими существующими серверами, средой виртуализации и инструментами наблюдения, такими как Grafana.",
+           en: "Yes. ORIONDB is built as an Oracle EM replacement and monitors Oracle databases in real time, while also supporting other DBMS types (multi-DB in the Pro and Max tiers). The platform integrates with your existing servers, virtualization environment and observability tools such as Grafana." } },
+    { q: { uz: "Sotib olishdan oldin bepul sinov yoki demo bormi?", ru: "Есть ли бесплатный пробный период или демо перед покупкой?", en: "Is there a free trial or demo before we buy?" },
+      a: { uz: "Albatta. ORIONDB'ning jonli demosini ko'rsatamiz va sizning muhitingizda bepul pilot o'rnatishni tashkil etishimiz mumkin, shunda jamoangiz platformani real bazalaringizda sinab ko'radi. Bu qaror qabul qilishni hech qanday majburiyatsiz osonlashtiradi.",
+           ru: "Конечно. Мы проводим живое демо ORIONDB и можем организовать бесплатный пилот в вашей среде, чтобы ваша команда протестировала платформу на реальных базах. Это позволяет принять решение без каких-либо обязательств.",
+           en: "Absolutely. We provide a live demo of ORIONDB and can set up a free pilot in your own environment so your team can evaluate the platform against real databases. This lets you decide with no obligation." } },
+    { q: { uz: "Xavfsizlik va kirish nazorati qanday tashkil etilgan?", ru: "Как организованы безопасность и контроль доступа?", en: "How are security and access control handled?" },
+      a: { uz: "ORIONDB rolga asoslangan kirish nazoratiga (RBAC) ega — har bir foydalanuvchiga aniq rol va ruxsatlar beriladi, sahifa va amallarni alohida boshqarish mumkin. Barcha ma'lumotlar sizning tarmog'ingizda saqlanadi, audit roli orqali harakatlar kuzatiladi va litsenziyalar kriptografik (Ed25519) imzo bilan himoyalangan.",
+           ru: "ORIONDB имеет ролевую модель доступа (RBAC) — каждому пользователю назначаются конкретные роли и права, а видимость страниц и действий настраивается отдельно. Все данные хранятся в вашей сети, действия отслеживаются через роль аудитора, а лицензии защищены криптографической подписью (Ed25519).",
+           en: "ORIONDB has role-based access control (RBAC) — each user is assigned specific roles and permissions, with page and action visibility managed granularly. All data stays within your network, activity is traceable via an auditor role, and licenses are protected with cryptographic (Ed25519) signing." } },
+    { q: { uz: "ORIONDB'ni bizning brendimiz ostida (white-label) chiqarish mumkinmi?", ru: "Можно ли выпустить ORIONDB под нашим брендом (white-label)?", en: "Can ORIONDB be branded as our own (white-label)?" },
+      a: { uz: "Ha, Max paketida to'liq white-label imkoniyati mavjud — platforma nomi, logotipi, favikoni va asosiy rangini sizning korporativ brendingizga moslashtiramiz. Shunday qilib, jamoangiz ORIONDB'ni o'zining ichki mahsuloti sifatida ko'radi.",
+           ru: "Да, в пакете Max доступен полный white-label — мы адаптируем название платформы, логотип, фавикон и фирменный цвет под ваш корпоративный бренд. Таким образом ваша команда воспринимает ORIONDB как ваш собственный внутренний продукт.",
+           en: "Yes. The Max tier includes full white-label — we adapt the platform name, logo, favicon and accent color to your corporate brand. Your team experiences ORIONDB as your own in-house product." } },
+  ];
+
+  /* ---- Case studies (representative examples — replace with real data via admin) ---- */
+  D.cases = [
+    { client: "NexaBank", metric: "99.98% uptime",
+      sector: { uz: "Bank va moliya", ru: "Банк и финансы", en: "Banking & Finance" },
+      problem: { uz: "NexaBank bir nechta Oracle bazasini alohida vositalar bilan kuzatardi. Uzilishlarni faqat mijozlar shikoyat qilgandan keyin bilishardi, sabab izlash esa soatlab vaqt olardi.",
+                 ru: "NexaBank следил за несколькими базами Oracle разрозненными инструментами. О сбоях узнавали уже после жалоб клиентов, а поиск причины занимал часы.",
+                 en: "NexaBank monitored several Oracle databases with scattered tools. Outages were noticed only after customer complaints, and finding the root cause took hours." },
+      solution: { uz: "ORIONDB platformasini joriy etdik: barcha bazalar bitta real-vaqt panelda, og'ish bo'lganda avtomatik ogohlantirish va sekin so'rovlarni tezkor aniqlash.",
+                  ru: "Мы внедрили платформу ORIONDB: все базы на одной панели в реальном времени, автоматические оповещения при отклонениях и быстрое выявление медленных запросов.",
+                  en: "We deployed the ORIONDB platform: all databases on one real-time panel, automatic alerts on anomalies, and rapid detection of slow queries." },
+      result: { uz: "Jamoa muammolarni mijozlardan oldin ko'ra boshladi. Tungi monitoring yengillashdi, xizmat barqarorligi sezilarli oshdi.",
+                ru: "Команда стала видеть проблемы раньше клиентов. Ночной мониторинг упростился, стабильность сервиса заметно выросла.",
+                en: "The team began spotting issues before customers did. Night-shift monitoring got easier and service stability rose noticeably." } },
+    { client: "DataSoft", metric: "−70% incident time",
+      sector: { uz: "IT va dasturiy ta'minot", ru: "IT и разработка ПО", en: "IT & Software" },
+      problem: { uz: "DataSoftda hodisaga javob berish qo'lda olib borilardi. Bitta nosozlikni topib tuzatishgacha ko'p vaqt ketar, mas'uliyat aniq taqsimlanmagan edi.",
+                 ru: "В DataSoft реагирование на инциденты велось вручную. На поиск и устранение одной неполадки уходило много времени, зоны ответственности были размыты.",
+                 en: "At DataSoft, incident response was manual. Locating and fixing a single fault took a long time, and ownership was unclear." },
+      solution: { uz: "ORIONDB asosida markazlashgan ogohlantirish va rol asosidagi kirishni sozladik, asosiy ko'rsatkichlar uchun aniq chegaralar belgiladik.",
+                  ru: "Мы настроили на базе ORIONDB централизованные оповещения и доступ по ролям, задали чёткие пороги по ключевым метрикам.",
+                  en: "On top of ORIONDB we set up centralized alerting and role-based access, with clear thresholds for key metrics." },
+      result: { uz: "Hodisani aniqlash va bartaraf etish vaqti keskin qisqardi, jamoa muammolarni ustuvorlik bo'yicha tez hal qila boshladi.",
+                ru: "Время обнаружения и устранения инцидентов резко сократилось, команда стала быстрее решать проблемы по приоритету.",
+                en: "Time to detect and resolve incidents dropped sharply, and the team began handling problems by priority much faster." } },
+    { client: "TezkorIT", metric: "50+ DB, 1 panel",
+      sector: { uz: "Bulutli xizmatlar va infratuzilma", ru: "Облачные сервисы и инфраструктура", en: "Cloud Services & Infrastructure" },
+      problem: { uz: "TezkorIT o'sib borayotgan mijozlar uchun o'nlab bazani boshqarardi. Har birini alohida tekshirish murakkab edi va umumiy manzara ko'rinmasdi.",
+                 ru: "TezkorIT обслуживал десятки баз данных для растущей клиентской базы. Проверять каждую отдельно было сложно, общей картины не было.",
+                 en: "TezkorIT managed dozens of databases for a growing client base. Checking each one separately was hard, and there was no single overview." },
+      solution: { uz: "Ko'p-bazali monitoringni bitta ORIONDB panelida birlashtirdik, yangi bazalarni avtomatik aniqlash va yagona hisobotlarni yo'lga qo'ydik.",
+                  ru: "Мы объединили мониторинг множества баз в одной панели ORIONDB, настроили автообнаружение новых баз и единую отчётность.",
+                  en: "We unified multi-database monitoring in a single ORIONDB panel, with auto-discovery of new databases and consolidated reporting." },
+      result: { uz: "Bitta operator butun infratuzilmani bir oynadan kuzatadi. Yangi mijozlarni ulash osonlashdi, monitoring uchun resurs tejaldi.",
+                ru: "Один оператор наблюдает всю инфраструктуру из одного окна. Подключение новых клиентов упростилось, ресурсы на мониторинг сократились.",
+                en: "One operator now watches the whole infrastructure from a single window. Onboarding new clients got easier and monitoring overhead went down." } },
+  ];
+
+  /* ---- Blog / articles ---- */
+  D.blog = [
+    { tag: "Monitoring",
+      title: { uz: "Real vaqtli monitoring nega \"yong'in o'chirish\"dan ustun turadi", ru: "Почему мониторинг в реальном времени выигрывает у «тушения пожаров»", en: "Why real-time DB monitoring beats reactive firefighting" },
+      excerpt: { uz: "Bazadagi muammoni mijoz sezguncha emas, balki u yuzaga kelguncha ko'rish — barqaror xizmatning asosi.", ru: "Увидеть проблему до того, как её заметит клиент, — основа стабильного сервиса.", en: "Seeing a problem before your customers do is the foundation of a stable service." },
+      body: { uz: "Ko'p tashkilotlar bazani faqat \"to'xtaganida\" eslab qolishadi: mijoz qo'ng'iroq qiladi, tranzaksiya o'tmaydi, jamoa esa shoshilinch ravishda sababini qidira boshlaydi. Bunday reaktiv yondashuv — \"yong'in o'chirish\" — har doim qimmat tushadi: ish vaqti yo'qoladi, ishonch pasayadi, va muammo allaqachon zarar yetkazgan paytda hal qilinadi.\n\nReal vaqtli monitoring mantiqni teskari aylantiradi. Sessiyalar, kechikishlar, tablespace to'lishi, bloklanishlar va anomal so'rovlar uzluksiz kuzatiladi. Ko'rsatkich xavfli chegaraga yaqinlashganda tizim oldindan ogohlantiradi — siz hali vaqt borligida choralar ko'rasiz. Natijada favqulodda holatlar rejalashtirilgan kichik ishlarga aylanadi.\n\nBiz ORIONDB orqali aynan shu o'tishni ta'minlaymiz: Oracle va boshqa bazalaringizni bir oynadan kuzating, muammo yuzaga kelishidan oldin signal oling va tungi favqulodda qo'ng'iroqlarni unuting. Monitoring — bu xarajat emas, bu uzluksiz ishlash kafolati.",
+              ru: "Многие организации вспоминают о базе данных только когда она «уже лежит»: клиент звонит, транзакция не проходит, а команда в спешке ищет причину. Такой реактивный подход — «тушение пожаров» — всегда обходится дорого: теряется время работы, падает доверие, а проблему решают тогда, когда ущерб уже нанесён.\n\nМониторинг в реальном времени переворачивает логику. Сессии, задержки, заполнение tablespace, блокировки и аномальные запросы отслеживаются непрерывно. Когда показатель приближается к опасному порогу, система предупреждает заранее — и у вас ещё есть время на действия. Аварии превращаются в плановые мелкие работы.\n\nИменно этот переход мы обеспечиваем с ORIONDB: наблюдайте за Oracle и другими базами из одного окна, получайте сигнал до возникновения сбоя и забудьте о ночных авральных звонках. Мониторинг — это не расход, а гарантия бесперебойной работы.",
+              en: "Many organizations only remember their database when it's already down: a customer calls, a transaction fails, and the team scrambles to find the cause. This reactive approach — firefighting — is always expensive: you lose uptime, you lose trust, and you fix the issue only after the damage is done.\n\nReal-time monitoring flips the logic. Sessions, latency, tablespace growth, locks, and anomalous queries are tracked continuously. When a metric approaches a dangerous threshold, the system warns you ahead of time — while you still have room to act. Emergencies turn into small, planned tasks.\n\nThat is exactly the shift we enable with ORIONDB: watch your Oracle and other databases from a single dashboard, get alerted before an incident happens, and forget the 3 a.m. emergency calls. Monitoring isn't a cost — it's your guarantee of uninterrupted operation." } },
+    { tag: "Security",
+      title: { uz: "Korporativ chat ichki serverda: ommaviy messenjerlarga nega ishonib bo'lmaydi", ru: "Корпоративный чат на своём сервере: почему публичным мессенджерам нельзя доверять", en: "On-prem corporate chat vs public messengers: a security case" },
+      excerpt: { uz: "Ish yozishmalaringiz qayerda saqlanishini bilmasangiz — ular sizniki emas.", ru: "Если вы не знаете, где хранится ваша переписка, — она вам не принадлежит.", en: "If you don't know where your messages are stored, they aren't really yours." },
+      body: { uz: "Bank, davlat tashkiloti yoki IT kompaniyasi uchun ichki yozishmalar — mijoz ma'lumotlari, shartnomalar, parollar va qarorlar oqimi. Ommaviy messenjerlarda bu ma'lumotlar chet el serverlarida, sizning nazoratingizdan tashqarida saqlanadi. Kim kirish huquqiga ega, ma'lumot qaysi yurisdiksiyada yotadi, xodim ketganda yozishmalar nima bo'ladi — bularning hech biriga aniq javob yo'q.\n\nIchki serverda (on-prem) joylashtirilgan korporativ chat bu savollarni yopadi. Barcha ma'lumot sizning infratuzilmangizda qoladi, kirish huquqlari rollar bo'yicha boshqariladi, audit jurnali har bir harakatni qayd etadi va integratsiya sizning xavfsizlik siyosatingizga bo'ysunadi. Ma'lumot mamlakat ichida, qonun talablariga mos saqlanadi.\n\nBiz tashkilotlarga o'z serverida ishlaydigan, xavfsizlik talablariga moslashtirilgan chat yechimlarini joriy etishda yordam beramiz. Qulaylik bilan nazoratni almashtirishning hojati yo'q — ikkalasiga ham erishish mumkin.",
+              ru: "Для банка, государственной организации или IT-компании внутренняя переписка — это данные клиентов, договоры, пароли и поток решений. В публичных мессенджерах эти данные хранятся на зарубежных серверах, вне вашего контроля. Кто имеет доступ, в какой юрисдикции лежит информация, что будет с перепиской после ухода сотрудника — ни на один из этих вопросов нет чёткого ответа.\n\nКорпоративный чат, развёрнутый на собственном сервере (on-prem), закрывает эти вопросы. Все данные остаются в вашей инфраструктуре, права доступа управляются по ролям, журнал аудита фиксирует каждое действие, а интеграции подчиняются вашей политике безопасности. Информация хранится внутри страны и в соответствии с требованиями законодательства.\n\nМы помогаем организациям внедрять чат-решения, работающие на собственном сервере и адаптированные под требования безопасности. Не нужно менять удобство на контроль — можно получить и то, и другое.",
+              en: "For a bank, a government body, or an IT company, internal correspondence is customer data, contracts, passwords, and the flow of decisions. In public messengers this data lives on foreign servers, outside your control. Who has access, in which jurisdiction the data sits, what happens to the history when an employee leaves — none of these questions has a clear answer.\n\nA corporate chat deployed on your own servers (on-prem) closes those gaps. All data stays inside your infrastructure, access is managed by roles, an audit log records every action, and integrations follow your security policy. Information is stored within the country and in line with legal requirements.\n\nWe help organizations roll out chat solutions that run on their own servers and are tailored to their security needs. You don't have to trade convenience for control — you can have both." } },
+    { tag: "DevOps",
+      title: { uz: "GitLab CI/CD'da Dev va Prod zonalari: ishonchli yetkazib berish qanday quriladi", ru: "Зоны Dev и Prod в GitLab CI/CD: как построить надёжную доставку", en: "Dev and Prod zones in a GitLab CI/CD pipeline" },
+      excerpt: { uz: "To'g'ri ajratilgan muhitlar relizni hodisadan oddiy amaliyotga aylantiradi.", ru: "Правильно разделённые среды превращают релиз из события в рутину.", en: "Properly separated environments turn a release from an event into a routine." },
+      body: { uz: "CI/CD'ning kuchi nafaqat avtomatlashtirish, balki muhitlarni aniq ajratishda. Dev zonasi — eksperiment maydoni: har bir commit avtomatik yig'iladi va test qilinadi, xatolar erta, arzon bosqichda topiladi. Prod zonasi esa muqaddas hudud: u yerga faqat sinovdan o'tgan, tasdiqlangan kod tushadi.\n\nGitLab pipeline'da bu ajratish bosqichlar (stages), muhit o'zgaruvchilari va manual approval orqali quriladi: build va test avtomatik, prodga deploy esa qo'lda tasdiq bilan, faqat himoyalangan branch'lardan. Sirlar (secrets) muhitlar bo'yicha alohida saqlanadi, shunda dev kaliti prodga, prod kaliti devga hech qachon tushmaydi. Rollback esa har doim bir buyruq narida turadi.\n\nBiz GitLab CI/CD pipeline'larini loyihalash va sozlashda yordam beramiz: zonalarni ajratamiz, deployni xavfsiz qilamiz va jamoangizga relizdan qo'rqmaslikni o'rgatamiz. Yaxshi pipeline — bu tezlik va barqarorlikni bir vaqtda beradi.",
+              ru: "Сила CI/CD не только в автоматизации, но и в чётком разделении сред. Зона Dev — это площадка для экспериментов: каждый коммит автоматически собирается и тестируется, ошибки находятся рано и дёшево. Зона Prod — это святая территория: туда попадает только проверенный и одобренный код.\n\nВ GitLab pipeline это разделение строится через этапы (stages), переменные среды и ручное подтверждение (manual approval): сборка и тесты автоматически, а деплой в prod — вручную и только из защищённых веток. Секреты хранятся отдельно по средам, чтобы ключ dev никогда не попал в prod, а ключ prod — в dev. А откат всегда в одной команде.\n\nМы помогаем проектировать и настраивать GitLab CI/CD pipeline: разделяем зоны, делаем деплой безопасным и учим команду не бояться релизов. Хороший pipeline даёт скорость и стабильность одновременно.",
+              en: "The power of CI/CD lies not only in automation but in cleanly separating environments. The Dev zone is a space for experiments: every commit is built and tested automatically, so bugs are caught early and cheaply. The Prod zone is sacred ground — only tested and approved code reaches it.\n\nIn a GitLab pipeline this separation is built with stages, environment variables, and manual approval: build and test run automatically, while deploy to prod is manual, triggered only from protected branches. Secrets are stored separately per environment, so a dev key never ends up in prod and a prod key never ends up in dev. And rollback is always one command away.\n\nWe help design and configure GitLab CI/CD pipelines: we separate the zones, make deployment safe, and teach your team to stop fearing releases. A good pipeline gives you speed and stability at the same time." } },
+  ];
+
+  /* ---- ORIONDB demo gallery ---- */
+  D.oriondb = D.oriondb || {};
+  D.oriondb.gallery = [
+    { img: "assets/oriondb/g-dashboard.svg", title: { uz: "Asosiy dashboard", ru: "Главный дашборд", en: "Main dashboard" } },
+    { img: "assets/oriondb/g-ash.svg", title: { uz: "ASH / Wait class tahlili", ru: "Анализ ASH / Wait class", en: "ASH / Wait class analysis" } },
+    { img: "assets/oriondb/g-alert.svg", title: { uz: "Telegram alert", ru: "Telegram-оповещение", en: "Telegram alert" } },
+  ];
+
+  /* ---- assign a hero image to each service (by English title keyword) ---- */
+  const SVC_IMG = [
+    [/gitlab/i, "assets/services/gitlab-pipeline.svg"],
+    [/active directory/i, "assets/services/active-directory.svg"],
+    [/windows server/i, "assets/services/windows-server.svg"],
+    [/provisioning|virtualization/i, "assets/services/srv-virtualization.svg"],
+    [/oriondb/i, "assets/oriondb.svg"],
+    [/oracle/i, "assets/oracle-linux.svg"],
+    [/linux/i, "assets/oracle-linux.svg"],
+    [/devops/i, "assets/portainer.svg"],
+    [/grafana/i, "assets/grafana.svg"],
+    [/zabbix/i, "assets/services/zabbix.svg"],
+    [/prometheus/i, "assets/services/prometheus.svg"],
+    [/network/i, "assets/network-monitoring.svg"],
+    [/elasticsearch/i, "assets/services/elasticsearch.svg"],
+    [/portainer/i, "assets/portainer.svg"],
+    [/uptime/i, "assets/services/uptime-kuma.svg"],
+    [/rabbitmq/i, "assets/services/rabbitmq.svg"],
+    [/nginx/i, "assets/services/nginx.svg"],
+    [/telegram/i, "assets/telegram-bot.svg"],
+    [/chat/i, "assets/orion-chat.svg"],
+    [/server monitoring/i, "assets/services/server-monitoring.svg"],
+    [/hikvision|camera/i, "assets/services/hikvision-cctv.svg"],
+    [/call center|callcenter/i, "assets/services/callcenter.svg"],
+    [/outsourcing/i, "assets/services/it-outsourcing.svg"],
+  ];
+  (D.services || []).forEach((s) => {
+    const en = (s.title && s.title.en) || "";
+    for (let i = 0; i < SVC_IMG.length; i++) { if (SVC_IMG[i][0].test(en)) { s.img = SVC_IMG[i][1]; break; } }
+  });
+})();

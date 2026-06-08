@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <!-- Title -->
+  <circle cx="28" cy="30" r="6" fill="#fbbf24"/>
+  <text x="42" y="34" fill="#e6eef8" font-size="15" font-weight="600">Log Explorer</text>
+  <text x="612" y="34" fill="#6b7d99" font-size="11" text-anchor="end">last 15m · 2,418 hits</text>
+
+  <!-- Search bar -->
+  <rect x="20" y="50" width="600" height="34" rx="8" fill="#0e1a2e" stroke="#1d2c49"/>
+  <circle cx="40" cy="67" r="6" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="44.5" y1="71.5" x2="50" y2="77" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+  <text x="62" y="71" fill="#7dd3fc" font-size="12">level:ERROR AND service:</text>
+  <text x="219" y="71" fill="#e6eef8" font-size="12">payments</text>
+  <rect x="566" y="56" width="48" height="22" rx="6" fill="#38bdf8"/>
+  <text x="590" y="71" fill="#0b1322" font-size="11" font-weight="600" text-anchor="middle">Run</text>
+
+  <!-- Histogram -->
+  <text x="20" y="106" fill="#6b7d99" font-size="10">Events over time</text>
+  <line x1="20" y1="158" x2="620" y2="158" stroke="#1d2c49"/>
+  <g>
+    <rect x="28"  y="138" width="20" height="20" rx="2" fill="#38bdf8"/>
+    <rect x="56"  y="126" width="20" height="32" rx="2" fill="#38bdf8"/>
+    <rect x="84"  y="118" width="20" height="40" rx="2" fill="#7dd3fc"/>
+    <rect x="112" y="132" width="20" height="26" rx="2" fill="#38bdf8"/>
+    <rect x="140" y="146" width="20" height="12" rx="2" fill="#38bdf8"/>
+    <rect x="168" y="120" width="20" height="38" rx="2" fill="#7dd3fc"/>
+    <rect x="196" y="112" width="20" height="46" rx="2" fill="#ef4444"/>
+    <rect x="224" y="128" width="20" height="30" rx="2" fill="#38bdf8"/>
+    <rect x="252" y="140" width="20" height="18" rx="2" fill="#38bdf8"/>
+    <rect x="280" y="122" width="20" height="36" rx="2" fill="#7dd3fc"/>
+    <rect x="308" y="134" width="20" height="24" rx="2" fill="#38bdf8"/>
+    <rect x="336" y="116" width="20" height="42" rx="2" fill="#7dd3fc"/>
+    <rect x="364" y="130" width="20" height="28" rx="2" fill="#38bdf8"/>
+    <rect x="392" y="142" width="20" height="16" rx="2" fill="#38bdf8"/>
+    <rect x="420" y="124" width="20" height="34" rx="2" fill="#38bdf8"/>
+    <rect x="448" y="110" width="20" height="48" rx="2" fill="#fbbf24"/>
+    <rect x="476" y="128" width="20" height="30" rx="2" fill="#38bdf8"/>
+    <rect x="504" y="136" width="20" height="22" rx="2" fill="#38bdf8"/>
+    <rect x="532" y="120" width="20" height="38" rx="2" fill="#7dd3fc"/>
+    <rect x="560" y="132" width="20" height="26" rx="2" fill="#38bdf8"/>
+    <rect x="588" y="144" width="20" height="14" rx="2" fill="#38bdf8"/>
+  </g>
+
+  <!-- Log lines panel -->
+  <rect x="20" y="174" width="600" height="206" rx="8" fill="#0e1a2e" stroke="#1d2c49"/>
+  <!-- header row -->
+  <text x="34" y="192" fill="#6b7d99" font-size="9">timestamp</text>
+  <text x="140" y="192" fill="#6b7d99" font-size="9">level</text>
+  <text x="210" y="192" fill="#6b7d99" font-size="9">message</text>
+  <line x1="28" y1="198" x2="612" y2="198" stroke="#1d2c49"/>
+
+  <!-- log row template -->
+  <g font-size="10.5">
+    <!-- 1 INFO -->
+    <text x="34" y="216" fill="#6b7d99">12:04:31</text>
+    <rect x="140" y="208" width="40" height="13" rx="3" fill="#34d399" opacity="0.18"/>
+    <text x="146" y="217" fill="#34d399" font-size="9" font-weight="600">INFO</text>
+    <text x="210" y="216" fill="#e6eef8">request handled in 42ms · GET /api/orders</text>
+
+    <!-- 2 WARN -->
+    <text x="34" y="240" fill="#6b7d99">12:04:33</text>
+    <rect x="140" y="232" width="44" height="13" rx="3" fill="#fbbf24" opacity="0.18"/>
+    <text x="146" y="241" fill="#fbbf24" font-size="9" font-weight="600">WARN</text>
+    <text x="210" y="240" fill="#e6eef8">slow query 1.8s on table payments</text>
+
+    <!-- 3 ERROR -->
+    <text x="34" y="264" fill="#6b7d99">12:04:35</text>
+    <rect x="140" y="256" width="46" height="13" rx="3" fill="#ef4444" opacity="0.18"/>
+    <text x="146" y="265" fill="#ef4444" font-size="9" font-weight="600">ERROR</text>
+    <text x="210" y="264" fill="#e6eef8">connection refused: db-02:5432</text>
+
+    <!-- 4 INFO -->
+    <text x="34" y="288" fill="#6b7d99">12:04:36</text>
+    <rect x="140" y="280" width="40" height="13" rx="3" fill="#34d399" opacity="0.18"/>
+    <text x="146" y="289" fill="#34d399" font-size="9" font-weight="600">INFO</text>
+    <text x="210" y="288" fill="#e6eef8">cache warmed · 1,204 keys loaded</text>
+
+    <!-- 5 ERROR -->
+    <text x="34" y="312" fill="#6b7d99">12:04:38</text>
+    <rect x="140" y="304" width="46" height="13" rx="3" fill="#ef4444" opacity="0.18"/>
+    <text x="146" y="313" fill="#ef4444" font-size="9" font-weight="600">ERROR</text>
+    <text x="210" y="312" fill="#e6eef8">unhandled exception in worker #7</text>
+
+    <!-- 6 INFO -->
+    <text x="34" y="336" fill="#6b7d99">12:04:40</text>
+    <rect x="140" y="328" width="40" height="13" rx="3" fill="#34d399" opacity="0.18"/>
+    <text x="146" y="337" fill="#34d399" font-size="9" font-weight="600">INFO</text>
+    <text x="210" y="336" fill="#e6eef8">healthcheck ok · uptime 4d 12h</text>
+
+    <!-- 7 WARN -->
+    <text x="34" y="360" fill="#6b7d99">12:04:42</text>
+    <rect x="140" y="352" width="44" height="13" rx="3" fill="#fbbf24" opacity="0.18"/>
+    <text x="146" y="361" fill="#fbbf24" font-size="9" font-weight="600">WARN</text>
+    <text x="210" y="360" fill="#e6eef8">retry 2/3 for upstream auth-svc</text>
+  </g>
+
+  <!-- index pill -->
+  <rect x="512" y="362" width="96" height="14" rx="7" fill="#8b5cf6" opacity="0.18"/>
+  <circle cx="522" cy="369" r="3" fill="#8b5cf6"/>
+  <text x="530" y="372" fill="#8b5cf6" font-size="9">logs-2026.06</text>
+</svg>

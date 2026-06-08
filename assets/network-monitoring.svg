@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="nmBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1322"/><stop offset="1" stop-color="#070d18"/></linearGradient>
+    <radialGradient id="nmNode" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#1e3a8a"/></radialGradient>
+  </defs>
+  <rect width="640" height="400" rx="14" fill="url(#nmBg)" stroke="#1d2c49" stroke-width="1.5"/>
+  <rect x="0" y="0" width="640" height="40" rx="14" fill="#0d1830"/><rect x="0" y="26" width="640" height="14" fill="#0d1830"/>
+  <text x="20" y="26" fill="#dbe7f2" font-size="13" font-weight="700">Tarmoq nazorati</text>
+  <circle cx="600" cy="20" r="4" fill="#34d399"/><text x="560" y="24" fill="#86efac" font-size="10">UP 99.9%</text>
+
+  <!-- topology -->
+  <g stroke="#24416b" stroke-width="1.5">
+    <line x1="320" y1="120" x2="180" y2="210"/><line x1="320" y1="120" x2="460" y2="210"/>
+    <line x1="320" y1="120" x2="320" y2="230"/>
+    <line x1="180" y1="210" x2="110" y2="320"/><line x1="180" y1="210" x2="250" y2="320"/>
+    <line x1="460" y1="210" x2="390" y2="320"/><line x1="460" y1="210" x2="530" y2="320"/>
+  </g>
+  <!-- core router -->
+  <circle cx="320" cy="120" r="22" fill="url(#nmNode)"/><text x="320" y="124" fill="#fff" font-size="10" text-anchor="middle" font-weight="700">CORE</text>
+  <!-- switches -->
+  <circle cx="180" cy="210" r="16" fill="#15233c" stroke="#34d399" stroke-width="2"/><text x="180" y="214" fill="#86efac" font-size="9" text-anchor="middle">SW1</text>
+  <circle cx="460" cy="210" r="16" fill="#15233c" stroke="#34d399" stroke-width="2"/><text x="460" y="214" fill="#86efac" font-size="9" text-anchor="middle">SW2</text>
+  <circle cx="320" cy="230" r="16" fill="#15233c" stroke="#fbbf24" stroke-width="2"><animate attributeName="stroke-opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"/></circle><text x="320" y="234" fill="#fbbf24" font-size="9" text-anchor="middle">FW</text>
+  <!-- hosts -->
+  <g font-size="8" text-anchor="middle">
+    <circle cx="110" cy="320" r="13" fill="#15233c" stroke="#34d399" stroke-width="1.5"/><text x="110" y="323" fill="#86efac">srv01</text>
+    <circle cx="250" cy="320" r="13" fill="#15233c" stroke="#34d399" stroke-width="1.5"/><text x="250" y="323" fill="#86efac">srv02</text>
+    <circle cx="390" cy="320" r="13" fill="#15233c" stroke="#ef4444" stroke-width="1.5"><animate attributeName="r" values="13;15;13" dur="1s" repeatCount="indefinite"/></circle><text x="390" y="323" fill="#ff8a8a">srv03</text>
+    <circle cx="530" cy="320" r="13" fill="#15233c" stroke="#34d399" stroke-width="1.5"/><text x="530" y="323" fill="#86efac">srv04</text>
+  </g>
+
+  <!-- side metrics -->
+  <g font-size="10">
+    <rect x="20" y="56" width="120" height="46" rx="8" fill="#0f1a2c" stroke="#1c2a44"/>
+    <text x="32" y="74" fill="#6b7d99" font-size="9">Bandwidth</text><text x="32" y="92" fill="#7dd3fc" font-size="15" font-weight="700">842 Mb/s</text>
+    <rect x="500" y="56" width="120" height="46" rx="8" fill="#0f1a2c" stroke="#1c2a44"/>
+    <text x="512" y="74" fill="#6b7d99" font-size="9">Latency</text><text x="512" y="92" fill="#34d399" font-size="15" font-weight="700">3.2 ms</text>
+  </g>
+</svg>

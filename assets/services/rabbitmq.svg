@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <text x="28" y="42" fill="#e6eef8" font-size="18" font-weight="700">RabbitMQ</text>
+  <text x="28" y="62" fill="#6b7d99" font-size="12">message broker · routing flow</text>
+
+  <!-- throughput badge -->
+  <rect x="460" y="26" width="152" height="44" rx="10" fill="#0e1b30" stroke="#1d2c49"/>
+  <circle cx="480" cy="48" r="4" fill="#34d399"/>
+  <text x="494" y="44" fill="#34d399" font-size="16" font-weight="700">12.4k</text>
+  <text x="540" y="44" fill="#e6eef8" font-size="13">msg/s</text>
+  <text x="494" y="60" fill="#6b7d99" font-size="10">throughput</text>
+
+  <!-- connection lines (behind nodes) -->
+  <g fill="none" stroke="#243a5e" stroke-width="2">
+    <path d="M150 200 H250"/>
+    <path d="M330 200 C370 200 380 120 430 120"/>
+    <path d="M330 200 H430"/>
+    <path d="M330 200 C370 200 380 280 430 280"/>
+    <path d="M548 120 H600"/>
+    <path d="M548 200 H600"/>
+    <path d="M548 280 H600"/>
+  </g>
+
+  <!-- producer -->
+  <rect x="40" y="170" width="110" height="60" rx="10" fill="#0e1b30" stroke="#38bdf8"/>
+  <circle cx="70" cy="200" r="11" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M65 200 H75 M71 196 l4 4 -4 4" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="90" y="197" fill="#e6eef8" font-size="12" font-weight="600">Producer</text>
+  <text x="90" y="212" fill="#6b7d99" font-size="10">publish</text>
+
+  <!-- exchange -->
+  <g>
+    <rect x="250" y="160" width="80" height="80" rx="10" fill="#0e1b30" stroke="#8b5cf6"/>
+    <path d="M280 184 h20 M280 200 h20 M280 216 h20" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="274" cy="184" r="2.5" fill="#8b5cf6"/>
+    <circle cx="274" cy="200" r="2.5" fill="#8b5cf6"/>
+    <circle cx="274" cy="216" r="2.5" fill="#8b5cf6"/>
+  </g>
+  <text x="290" y="256" fill="#e6eef8" font-size="11" text-anchor="middle" font-weight="600">Exchange</text>
+  <text x="290" y="270" fill="#6b7d99" font-size="9" text-anchor="middle">topic routing</text>
+
+  <!-- queues -->
+  <g>
+    <rect x="430" y="98" width="118" height="44" rx="8" fill="#0e1b30" stroke="#38bdf8"/>
+    <rect x="440" y="110" width="14" height="20" rx="2" fill="none" stroke="#7dd3fc"/>
+    <rect x="456" y="110" width="14" height="20" rx="2" fill="none" stroke="#7dd3fc"/>
+    <rect x="472" y="110" width="14" height="20" rx="2" fill="none" stroke="#7dd3fc"/>
+    <text x="498" y="118" fill="#e6eef8" font-size="11" font-weight="600">orders.q</text>
+    <text x="498" y="131" fill="#6b7d99" font-size="9">ready 84</text>
+  </g>
+  <g>
+    <rect x="430" y="178" width="118" height="44" rx="8" fill="#0e1b30" stroke="#34d399"/>
+    <rect x="440" y="190" width="14" height="20" rx="2" fill="none" stroke="#34d399"/>
+    <rect x="456" y="190" width="14" height="20" rx="2" fill="none" stroke="#34d399"/>
+    <rect x="472" y="190" width="14" height="20" rx="2" fill="none" stroke="#34d399"/>
+    <text x="498" y="198" fill="#e6eef8" font-size="11" font-weight="600">email.q</text>
+    <text x="498" y="211" fill="#6b7d99" font-size="9">ready 12</text>
+  </g>
+  <g>
+    <rect x="430" y="258" width="118" height="44" rx="8" fill="#0e1b30" stroke="#fbbf24"/>
+    <rect x="440" y="270" width="14" height="20" rx="2" fill="none" stroke="#fbbf24"/>
+    <rect x="456" y="270" width="14" height="20" rx="2" fill="none" stroke="#fbbf24"/>
+    <rect x="472" y="270" width="14" height="20" rx="2" fill="none" stroke="#fbbf24"/>
+    <text x="498" y="278" fill="#e6eef8" font-size="11" font-weight="600">audit.q</text>
+    <text x="498" y="291" fill="#ef4444" font-size="9">ready 207</text>
+  </g>
+
+  <!-- consumers -->
+  <g fill="#0e1b30">
+    <rect x="600" y="104" width="32" height="32" rx="7" stroke="#6b7d99"/>
+    <rect x="600" y="184" width="32" height="32" rx="7" stroke="#6b7d99"/>
+    <rect x="600" y="264" width="32" height="32" rx="7" stroke="#6b7d99"/>
+  </g>
+  <g fill="none" stroke="#7dd3fc" stroke-width="1.6">
+    <circle cx="616" cy="116" r="4"/><path d="M609 130 a7 7 0 0 1 14 0"/>
+  </g>
+  <g fill="none" stroke="#34d399" stroke-width="1.6">
+    <circle cx="616" cy="196" r="4"/><path d="M609 210 a7 7 0 0 1 14 0"/>
+  </g>
+  <g fill="none" stroke="#fbbf24" stroke-width="1.6">
+    <circle cx="616" cy="276" r="4"/><path d="M609 290 a7 7 0 0 1 14 0"/>
+  </g>
+
+  <!-- moving message dots -->
+  <circle r="4" fill="#7dd3fc">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M150 200 H250"/>
+  </circle>
+  <circle r="4" fill="#38bdf8">
+    <animateMotion dur="2.6s" repeatCount="indefinite" path="M330 200 C370 200 380 120 430 120"/>
+  </circle>
+  <circle r="4" fill="#34d399">
+    <animateMotion dur="2.4s" repeatCount="indefinite" path="M330 200 H430"/>
+  </circle>
+  <circle r="4" fill="#fbbf24">
+    <animateMotion dur="2.8s" repeatCount="indefinite" path="M330 200 C370 200 380 280 430 280"/>
+  </circle>
+  <circle r="3.5" fill="#7dd3fc">
+    <animateMotion dur="1.6s" repeatCount="indefinite" path="M548 120 H600"/>
+  </circle>
+  <circle r="3.5" fill="#34d399">
+    <animateMotion dur="1.6s" repeatCount="indefinite" path="M548 200 H600"/>
+  </circle>
+  <circle r="3.5" fill="#fbbf24">
+    <animateMotion dur="1.6s" repeatCount="indefinite" path="M548 280 H600"/>
+  </circle>
+
+  <text x="320" y="378" fill="#6b7d99" font-size="10" text-anchor="middle">producer → exchange → queues → consumers</text>
+</svg>

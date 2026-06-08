@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset="1" stop-color="#070d18"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6b7d99"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="400" rx="14" fill="url(#bg)" stroke="#1d2c49"/>
+
+  <!-- title -->
+  <circle cx="30" cy="34" r="9" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+  <path d="M30 27 L33 35 L30 41 L27 35 Z" fill="#fbbf24"/>
+  <text x="48" y="32" fill="#e6eef8" font-size="16" font-weight="600">GitLab CI/CD Pipeline</text>
+  <text x="48" y="48" fill="#6b7d99" font-size="11">.gitlab-ci.yml · stages</text>
+
+  <!-- pipeline track -->
+  <line x1="48" y1="118" x2="592" y2="118" stroke="#1d2c49" stroke-width="2"/>
+
+  <!-- Stage: Build -->
+  <g>
+    <rect x="48" y="96" width="110" height="44" rx="9" fill="#0f1d33" stroke="#38bdf8"/>
+    <circle cx="68" cy="118" r="6" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M65 118 L67 121 L72 115" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <text x="82" y="115" fill="#e6eef8" font-size="12" font-weight="600">Build</text>
+    <text x="82" y="129" fill="#6b7d99" font-size="9">compile</text>
+  </g>
+  <line x1="158" y1="118" x2="186" y2="118" stroke="#6b7d99" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- Stage: Test -->
+  <g>
+    <rect x="188" y="96" width="110" height="44" rx="9" fill="#0f1d33" stroke="#7dd3fc"/>
+    <circle cx="208" cy="118" r="6" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+    <path d="M205 118 L207 121 L212 115" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+    <text x="222" y="115" fill="#e6eef8" font-size="12" font-weight="600">Test</text>
+    <text x="222" y="129" fill="#6b7d99" font-size="9">unit · lint</text>
+  </g>
+  <line x1="298" y1="118" x2="326" y2="118" stroke="#6b7d99" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- Stage: Deploy Dev -->
+  <g>
+    <rect x="328" y="96" width="120" height="44" rx="9" fill="#0f1d33" stroke="#34d399"/>
+    <circle cx="348" cy="118" r="6" fill="none" stroke="#34d399" stroke-width="2"/>
+    <path d="M345 118 L347 121 L352 115" fill="none" stroke="#34d399" stroke-width="2"/>
+    <text x="362" y="115" fill="#e6eef8" font-size="12" font-weight="600">Deploy</text>
+    <text x="362" y="129" fill="#34d399" font-size="9">Dev</text>
+  </g>
+  <line x1="448" y1="118" x2="476" y2="118" stroke="#6b7d99" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- Stage: Deploy Prod (manual) -->
+  <g>
+    <rect x="478" y="96" width="114" height="44" rx="9" fill="#0f1d33" stroke="#8b5cf6"/>
+    <rect x="496" y="110" width="13" height="9" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.6"/>
+    <path d="M498.5 110 v-3 a3 3 0 0 1 6 0 v3" fill="none" stroke="#fbbf24" stroke-width="1.6"/>
+    <text x="518" y="111" fill="#e6eef8" font-size="12" font-weight="600">Deploy</text>
+    <text x="518" y="125" fill="#8b5cf6" font-size="9">Prod · manual</text>
+  </g>
+
+  <!-- Dev zona box -->
+  <rect x="48" y="200" width="290" height="150" rx="11" fill="#0c1a1d" stroke="#34d399" stroke-dasharray="5 4"/>
+  <circle cx="68" cy="222" r="5" fill="#34d399"/>
+  <text x="82" y="226" fill="#34d399" font-size="13" font-weight="600">Dev zona</text>
+  <text x="248" y="226" fill="#6b7d99" font-size="9">auto-deploy</text>
+
+  <!-- dev nodes -->
+  <g>
+    <rect x="68" y="244" width="78" height="46" rx="8" fill="#10221f" stroke="#1d2c49"/>
+    <rect x="84" y="258" width="46" height="8" rx="2" fill="#34d399" opacity="0.85"/>
+    <rect x="84" y="270" width="34" height="6" rx="2" fill="#6b7d99"/>
+    <text x="107" y="304" fill="#6b7d99" font-size="9" text-anchor="middle">app</text>
+  </g>
+  <g>
+    <rect x="160" y="244" width="78" height="46" rx="8" fill="#10221f" stroke="#1d2c49"/>
+    <circle cx="199" cy="263" r="11" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+    <line x1="199" y1="263" x2="199" y2="256" stroke="#7dd3fc" stroke-width="2"/>
+    <line x1="199" y1="263" x2="204" y2="266" stroke="#7dd3fc" stroke-width="2"/>
+    <text x="199" y="304" fill="#6b7d99" font-size="9" text-anchor="middle">runner</text>
+  </g>
+  <g>
+    <rect x="252" y="244" width="70" height="46" rx="8" fill="#10221f" stroke="#1d2c49"/>
+    <path d="M287 252 a14 7 0 1 0 0.1 0 M273 259 a14 7 0 0 0 28 0 M273 259 v8 a14 7 0 0 0 28 0 v-8" fill="none" stroke="#8b5cf6" stroke-width="1.6"/>
+    <text x="287" y="304" fill="#6b7d99" font-size="9" text-anchor="middle">DB</text>
+  </g>
+
+  <!-- Prod zona box -->
+  <rect x="358" y="200" width="234" height="150" rx="11" fill="#1a0f17" stroke="#8b5cf6" stroke-dasharray="5 4"/>
+  <circle cx="378" cy="222" r="5" fill="#8b5cf6"/>
+  <text x="392" y="226" fill="#8b5cf6" font-size="13" font-weight="600">Prod zona</text>
+
+  <!-- manual approve lock -->
+  <rect x="500" y="210" width="78" height="26" rx="13" fill="#251635" stroke="#fbbf24"/>
+  <rect x="513" y="219" width="11" height="8" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.5"/>
+  <path d="M515.5 219 v-2.5 a2.5 2.5 0 0 1 5 0 v2.5" fill="none" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="530" y="227" fill="#fbbf24" font-size="9.5">approve</text>
+
+  <!-- prod nodes -->
+  <g>
+    <rect x="378" y="248" width="92" height="44" rx="8" fill="#231230" stroke="#1d2c49"/>
+    <rect x="396" y="262" width="56" height="8" rx="2" fill="#8b5cf6" opacity="0.85"/>
+    <rect x="396" y="274" width="40" height="6" rx="2" fill="#6b7d99"/>
+    <text x="424" y="305" fill="#6b7d99" font-size="9" text-anchor="middle">live app</text>
+  </g>
+  <g>
+    <rect x="484" y="248" width="92" height="44" rx="8" fill="#231230" stroke="#1d2c49"/>
+    <circle cx="513" cy="268" r="6" fill="#34d399"/>
+    <circle cx="530" cy="268" r="6" fill="#34d399"/>
+    <circle cx="547" cy="268" r="6" fill="#6b7d99"/>
+    <text x="530" y="305" fill="#6b7d99" font-size="9" text-anchor="middle">replicas</text>
+  </g>
+
+  <!-- connect stages to zones -->
+  <path d="M388 140 L388 168 L120 168 L120 198" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+  <path d="M535 140 L535 198" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+</svg>
